@@ -2,12 +2,12 @@ import { apiAction } from "store/actions";
 import { REST_METHODS } from "constant";
 import { labels } from "./types";
 
-export const async_fetch = () => {
+export const async_register = (data) => {
     return apiAction({
-        type: labels.FETCH,
-        method: REST_METHODS.get,
+        data,
         url: "/users",
-        payload: "Hey",
+        method: REST_METHODS.get,
+        type: labels.REGISTER_SET,
         onSuccess: (response) => {
             return {
                 type: labels.SET,
@@ -17,9 +17,9 @@ export const async_fetch = () => {
     });
 };
 
-export const fetch = () => {
+export const register = (user) => {
     return {
-        type: labels.FETCH,
-        payload: "Initial State",
+        type: labels.REGISTER_SET,
+        payload: user,
     };
 };

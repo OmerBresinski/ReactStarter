@@ -1,9 +1,9 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
-import { reducer1 } from "store/reducers";
+import { users } from "store/reducers";
 import { api } from "store/middleware";
 
 const rootReducer = combineReducers({
-    reducer1,
+    users,
 });
 
 const store = createStore(rootReducer, applyMiddleware(api));

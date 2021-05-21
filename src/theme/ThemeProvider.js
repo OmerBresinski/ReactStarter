@@ -14,6 +14,9 @@ const ThemeProvider = ({ children }) => {
                     primary: {
                         main: "#84ffff",
                     },
+                    error: {
+                        main: "#f06292",
+                    },
                 },
             }),
         [prefersDarkMode]
