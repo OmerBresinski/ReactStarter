@@ -11,11 +11,11 @@ const TextInput = ({
     required,
     disabled,
     onChange,
-    autoFocus,
     multiline,
     fieldName,
     value = "",
     placeholder,
+    autoFocus = false,
     variant = C.VARIANT.standard,
     size = C.SIZE.small,
 }) => {
