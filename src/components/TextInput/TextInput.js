@@ -7,29 +7,29 @@ const TextInput = ({
     value,
     label,
     isDirty,
+    isValid,
     required,
     disabled,
     onChange,
     autoFocus,
     multiline,
+    fieldName,
     placeholder,
     variant = C.VARIANT.standard,
     size = C.TEXT_INPUT_SIZE.small,
 }) => {
-    const [shouldShowError, setShouldShowError] = useState(false);
-
     useEffect(() => {
         validate(value);
     }, []);
 
     const validate = (value) => {
-        setShouldShowError(!value?.length);
+        return value?.length > 0;
     };
 
     const handleChange = (e) => {
         const value = e.target.value;
-        validate(value);
-        onChange(value);
+        const isValid = validate(value);
+        onChange({ fieldName, value, isValid });
     };
 
     return (
@@ -46,7 +46,7 @@ const TextInput = ({
             multiline={multiline}
             onChange={handleChange}
             placeholder={placeholder}
-            error={!disabled && isDirty && shouldShowError}
+            error={!disabled && isDirty && !isValid}
         />
     );
 };
