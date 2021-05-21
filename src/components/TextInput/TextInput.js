@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import * as C from "constant";
 import { TextField } from "@material-ui/core";
 
 const TextInput = ({
     rows,
-    value,
+    type,
     label,
     isDirty,
     isValid,
@@ -14,12 +14,13 @@ const TextInput = ({
     autoFocus,
     multiline,
     fieldName,
+    value = "",
     placeholder,
     variant = C.VARIANT.standard,
-    size = C.TEXT_INPUT_SIZE.small,
+    size = C.SIZE.small,
 }) => {
     useEffect(() => {
-        validate(value);
+        onChange({ fieldName, value: value, isValid: validate(value) });
     }, []);
 
     const validate = (value) => {
@@ -35,6 +36,7 @@ const TextInput = ({
     return (
         <TextField
             fullWidth
+            type={type}
             size={size}
             rows={rows}
             label={label}
