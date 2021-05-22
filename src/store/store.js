@@ -3,7 +3,7 @@ import { users } from "store/reducers";
 import { api } from "store/middleware";
 
 const rootReducer = combineReducers({
-    users,
+  users,
 });
 
 const store = createStore(rootReducer, applyMiddleware(api));
