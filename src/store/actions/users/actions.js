@@ -7,10 +7,10 @@ export const async_register = (data) => {
         data,
         url: "/users",
         method: REST_METHODS.get,
-        type: labels.REGISTER_SET,
+        type: labels.REGISTER_GET,
         onSuccess: (response) => {
             return {
-                type: labels.SET,
+                type: labels.REGISTER_SET,
                 payload: response,
             };
         },
