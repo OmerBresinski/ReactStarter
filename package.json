@@ -2,6 +2,8 @@
   "name": "react-9178",
   "version": "1.0.6",
   "bin": "./bin/cli.js",
+  "license": "MIT",
+  "homepage": "https://github.com/OmerBresinski/react-9178",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@testing-library/jest-dom": "^5.12.0",
