@@ -1,6 +1,6 @@
 {
     "name": "react-9178",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "bin": "./bin/cli.js",
     "dependencies": {
         "@material-ui/core": "^4.11.4",
