@@ -1,7 +1,8 @@
 {
-    "name": "oracledb-frontend",
+    "name": "react-9178",
+    "package-name": "git+https://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:x-oauth-basic@github.com/omerbresinski/react-9178.git",
     "version": "0.1.0",
-    "private": true,
+    "bin": "./bin/cli.js",
     "dependencies": {
         "@material-ui/core": "^4.11.4",
         "@testing-library/jest-dom": "^5.12.0",
